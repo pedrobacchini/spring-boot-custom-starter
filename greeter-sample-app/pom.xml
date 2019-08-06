@@ -50,6 +50,11 @@
             <artifactId>greeter-library</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.pedrobacchini</groupId>
+            <artifactId>hello-library</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>

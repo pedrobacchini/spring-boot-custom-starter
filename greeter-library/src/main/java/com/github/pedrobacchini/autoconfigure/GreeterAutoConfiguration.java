@@ -1,6 +1,7 @@
 package com.github.pedrobacchini.autoconfigure;
 
 import com.github.pedrobacchini.library.Greeter;
+import com.github.pedrobacchini.library.GreeterConfigParams;
 import com.github.pedrobacchini.library.GreetingConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -8,8 +9,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import static com.github.pedrobacchini.library.GreeterConfigParams.*;
 
 
 @Configuration
@@ -31,11 +30,11 @@ public class GreeterAutoConfiguration {
         String nightMessage = greeterProperties.getNightMessage() == null ? "Good Night" : greeterProperties.getNightMessage();
 
         GreetingConfig greetingConfig = new GreetingConfig();
-        greetingConfig.put(USER_NAME, userName);
-        greetingConfig.put(MORNING_MESSAGE, morningMessage);
-        greetingConfig.put(AFTERNOON_MESSAGE, afternoonMessage);
-        greetingConfig.put(EVENING_MESSAGE, eveningMessage);
-        greetingConfig.put(NIGHT_MESSAGE, nightMessage);
+        greetingConfig.put(GreeterConfigParams.USER_NAME, userName);
+        greetingConfig.put(GreeterConfigParams.MORNING_MESSAGE, morningMessage);
+        greetingConfig.put(GreeterConfigParams.AFTERNOON_MESSAGE, afternoonMessage);
+        greetingConfig.put(GreeterConfigParams.EVENING_MESSAGE, eveningMessage);
+        greetingConfig.put(GreeterConfigParams.NIGHT_MESSAGE, nightMessage);
         return greetingConfig;
     }
 
