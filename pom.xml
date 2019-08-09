@@ -19,11 +19,20 @@
     <modules>
         <module>greeter-library</module>
         <module>hello-library</module>
+        <module>greeter-sample-app</module>
     </modules>
 
     <properties>
         <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
